@@ -1,0 +1,24 @@
+{
+  "name": "twotter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yohanessahrul/twotter.git"
+  },
+  "author": "yohanessahrul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yohanessahrul/twotter/issues"
+  },
+  "homepage": "https://github.com/yohanessahrul/twotter#readme",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "oauth": "^0.9.15"
+  }
+}
