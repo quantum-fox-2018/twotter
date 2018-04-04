@@ -1,6 +1,7 @@
 const app = require('express')()
 const bodyParser = require('body-parser')
 const api = require('./routes/api')
+require('dotenv').config()
 
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())

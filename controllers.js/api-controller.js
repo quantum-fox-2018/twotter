@@ -2,8 +2,8 @@ var OAuth = require('oauth');
 var oauth = new OAuth.OAuth(
   'https://api.twitter.com/oauth/request_token',
   'https://api.twitter.com/oauth/access_token',
-  'EdZgC8RsTbQDn7e49zqN2szwh',
-  'Bmh8C4x0zOB7Y3mSyJ0CgtLmSqQPB37PCXphxmsTrJN4pqNbNt',
+  process.env.CONSUMERKEY,
+  process.env.CONSUMERSECRET,
   '1.0A',
   null,
   'HMAC-SHA1'
@@ -14,8 +14,8 @@ module.exports = {
   getTimeline : function(req,res){
     oauth.get(
       'https://api.twitter.com/1.1/statuses/home_timeline.json',
-      '981386159233347585-QZhEdpOK5U1FrvojTgGwEmpdJH8pc9P', //test user token
-      'zigT7CAHKKQLWWU8fnPR1g1pATGPacGMrElNb7TkWOxzG', //test user secret
+      process.env.USERKEY,
+      process.env.USERSECRET,
       function (err, data, result){
         if(!err){
           res.status(200).json({
@@ -35,8 +35,8 @@ module.exports = {
   searchTweet : function(req,res){
     oauth.get(
       `https://api.twitter.com/1.1/search/tweets.json?q=${req.query.tweet}`,
-      '981386159233347585-QZhEdpOK5U1FrvojTgGwEmpdJH8pc9P', //test user token
-      'zigT7CAHKKQLWWU8fnPR1g1pATGPacGMrElNb7TkWOxzG', //test user secret
+      process.env.USERKEY,
+      process.env.USERSECRET,
       function (err, data, result){
         if(!err){
           res.status(200).json({
@@ -56,8 +56,8 @@ module.exports = {
   postTweet : function(req,res){
     oauth.post(
       `https://api.twitter.com/1.1/statuses/update.json`,
-      '981386159233347585-QZhEdpOK5U1FrvojTgGwEmpdJH8pc9P', //test user token
-      'zigT7CAHKKQLWWU8fnPR1g1pATGPacGMrElNb7TkWOxzG', //test user secret
+      process.env.USERKEY,
+      process.env.USERSECRET,
       {status : req.body.status},
       function (err, data, result){
         if(!err){
