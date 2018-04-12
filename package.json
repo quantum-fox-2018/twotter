@@ -1,0 +1,27 @@
+{
+  "name": "twotter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekifakhrureza/twotter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ekifakhrureza/twotter/issues"
+  },
+  "homepage": "https://github.com/ekifakhrureza/twotter#readme",
+  "keywords": [],
+  "dependencies": {
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "oath": "^1.0.0",
+    "oauth": "^0.9.15"
+  }
+}
